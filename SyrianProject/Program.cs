@@ -15,11 +15,11 @@ builder.Services.AddDbContext<AppDbContext>(x => x.UseSqlServer(connectionString
 #region App
 
 var app = builder.Build();
-app.MapDefaultControllerRoute();
-//app.MapControllerRoute(
-//    name: "default",
-//    pattern: "{controller=medicaldepartment}/{action=index}"
-//    );
+//app.MapDefaultControllerRoute();
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=medicaldepartment}/{action=index}"
+    );
 app.UseStaticFiles();
 app.Run();
 

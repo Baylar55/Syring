@@ -1,7 +1,9 @@
 ﻿@using SyrianProject.ViewModels.FindADoctor;
 @model FindADoctorIndexViewModel;
 
+<!-- main starts -->
 <main>
+
     <!-- main-frame section starts -->
     <section class="main-frame-2 no-select" style="background-image: url(assets/images/doctor-page-title.jpg);">
         <div class="container">
@@ -51,6 +53,7 @@
                         patient care is what sets Syring Medical Center apaert health care experience.
                     </p>
                     <div class="doctor-items">
+
                         @{
                             foreach (var doctorComponent in Model.DoctorComponents)
                             {
@@ -61,136 +64,12 @@
                                         </div>
                                         <div class="doctor-info">
                                             <div class="doctor-name">@doctorComponent.Name</div>
-                                            <div class="doctor-subtitle">
-                                                Hospital doctors examine patients so that they can diagnose and treat health
-                                                conditions and diseases.
-                                            </div>
-                                            <div class="doctor-skill">
-                                                BDS , MDS - Periodontology and Oral Implantology, 22 Years Experience
-                                            </div>
-                                            <div class="view-appointment d-flex">
-                                                <div class="view">
-                                                    <a href="doctor-single.html">View Profile</a>
-                                                    <span class="line"></span>
-                                                </div>
-                                                <div class="appointment">
-                                                    <p>Appointment</p>
-                                                    <span class="line"></span>
-                                                </div>
-                                            </div>
+                                            @Html.Raw(doctorComponent.Description)
                                         </div>
                                     </div>
                                 </div>
                             }
                         }
-                        @*<div class="doctor-item">
-                            <div class="doctor-item-wrapper d-flex">
-                                <div class="doctor-img">
-                                    <img src="assets/images/doctor-2.jpg" alt="">
-                                </div>
-                                <div class="doctor-info">
-                                    <div class="doctor-name">Alexandro</div>
-                                    <div class="doctor-subtitle">
-                                        Hospital doctors examine patients so that they can diagnose and treat health
-                                        conditions and diseases.
-                                    </div>
-                                    <div class="doctor-skill">
-                                        BDS , MDS - Periodontology and Oral Implantology, 22 Years Experience
-                                    </div>
-                                    <div class="view-appointment d-flex">
-                                        <div class="view">
-                                            <a href="doctor-single.html">View Profile</a>
-                                            <span class="line"></span>
-                                        </div>
-                                        <div class="appointment">
-                                            <p>Appointment</p>
-                                            <span class="line"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="doctor-item">
-                            <div class="doctor-item-wrapper d-flex">
-                                <div class="doctor-img">
-                                    <img src="assets/images/doctor-3.jpg" alt="">
-                                </div>
-                                <div class="doctor-info">
-                                    <div class="doctor-name">Alex Koztex</div>
-                                    <div class="doctor-subtitle">
-                                        Hospital doctors examine patients so that they can diagnose and treat health
-                                        conditions and diseases.
-                                    </div>
-                                    <div class="doctor-skill">
-                                        BDS , MDS - Periodontology and Oral Implantology, 22 Years Experience
-                                    </div>
-                                    <div class="view-appointment d-flex">
-                                        <div class="view">
-                                            <a href="doctor-single.html">View Profile</a>
-                                            <span class="line"></span>
-                                        </div>
-                                        <div class="appointment">
-                                            <p>Appointment</p>
-                                            <span class="line"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="doctor-item">
-                            <div class="doctor-item-wrapper d-flex">
-                                <div class="doctor-img">
-                                    <img src="assets/images/doctor-4.jpg" alt="">
-                                </div>
-                                <div class="doctor-info">
-                                    <div class="doctor-name">Mia Clark</div>
-                                    <div class="doctor-subtitle">
-                                        Hospital doctors examine patients so that they can diagnose and treat health
-                                        conditions and diseases.
-                                    </div>
-                                    <div class="doctor-skill">
-                                        BDS , MDS - Periodontology and Oral Implantology, 22 Years Experience
-                                    </div>
-                                    <div class="view-appointment d-flex">
-                                        <div class="view">
-                                            <a href="doctor-single.html">View Profile</a>
-                                            <span class="line"></span>
-                                        </div>
-                                        <div class="appointment">
-                                            <p>Appointment</p>
-                                            <span class="line"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="doctor-item">
-                            <div class="doctor-item-wrapper d-flex">
-                                <div class="doctor-img">
-                                    <img src="assets/images/doctor-5.jpg" alt="">
-                                </div>
-                                <div class="doctor-info">
-                                    <div class="doctor-name">Jane Doyle</div>
-                                    <div class="doctor-subtitle">
-                                        Hospital doctors examine patients so that they can diagnose and treat health
-                                        conditions and diseases.
-                                    </div>
-                                    <div class="doctor-skill">
-                                        BDS , MDS - Periodontology and Oral Implantology, 22 Years Experience
-                                    </div>
-                                    <div class="view-appointment d-flex">
-                                        <div class="view">
-                                            <a href="doctor-single.html">View Profile</a>
-                                            <span class="line"></span>
-                                        </div>
-                                        <div class="appointment">
-                                            <p>Appointment</p>
-                                            <span class="line"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>*@
 
 
 

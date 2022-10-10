@@ -1,6 +1,6 @@
-﻿ @using SyrianProject.ViewModels.MedicalDepartment;
- @model MedicalDepartmentIndexViewModel;
-   <!-- main starts -->
+﻿@using SyrianProject.ViewModels.MedicalDepartment;
+@model MedicalDepartmentIndexViewModel;
+<!-- main starts -->
 <main>
     <!-- main-frame section starts -->
     <section class="main-frame-2 no-select" style="background-image: url(assets/images/medical-department.jpg);">
@@ -32,21 +32,27 @@
                 </div>
             </div>
             <div class="row items-content" data-aos="fade-up" data-aos-duration="2000">
-                <div class="col-lg-4">
-                    <div class="md-item">
-                        <div class="md-item-icon">
-                            <img src="assets/images/md-icon-1.png" alt="">
+                @{
+                    foreach (var departmentComponent in Model.DepartmentComponents)
+                    {
+                        <div class="col-lg-4">
+                            <div class="md-item">
+                                <div class="md-item-icon">
+                                    <img src="@departmentComponent.FilePath" alt="">
+                                </div>
+                                <div class="title">
+                                    @departmentComponent.Title
+                                </div>
+                                <p class="subtitle">
+                                @departmentComponent.Description
+                                </p>
+                               @Html.Raw(departmentComponent.Details)
+                            </div>
                         </div>
-                        <div class="title">
-                            Cardiology
-                        </div>
-                        <p class="subtitle">
-                            We are here to provide a full range of exceptional quality care for dental services.
-                        </p>
-                        <div class="button">More Details >></div>
-                    </div>
-                </div>
-                <div class="col-lg-4 pt-5 pt-lg-0">
+                    }
+                }
+
+                @*<div class="col-lg-4 pt-5 pt-lg-0">
                     <div class="md-item">
                         <div class="md-item-icon">
                             <img src="assets/images/md-icon-2.png" alt="">
@@ -115,7 +121,8 @@
                         </p>
                         <div class="button">More Details >></div>
                     </div>
-                </div>
+                </div>*@
+
             </div>
         </div>
     </section>

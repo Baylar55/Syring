@@ -11,5 +11,7 @@ namespace SyrianProject.DAL
         }
         public DbSet<DoctorComponent> DoctorComponents { get; set; }
         public DbSet<DepartmentComponent> DepartmentComponents { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<CategoryComponent> CategoryComponents { get; set; }
     }
 }
